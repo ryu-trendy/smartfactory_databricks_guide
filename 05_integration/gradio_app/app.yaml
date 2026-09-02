@@ -1,0 +1,17 @@
+# Databricks Apps 배포 설정 — 스마트팩토리 정비 AI 어시스턴트
+# 참고: https://docs.databricks.com/en/dev-tools/databricks-apps/index.html
+
+command:
+  - python
+  - app.py
+
+env:
+  - name: SERVING_ENDPOINT
+    value: agents_smartfactory-ai-multi_agent_supervisor
+
+# 앱 SP가 접근해야 하는 Databricks 리소스 선언
+resources:
+  - name: agent-endpoint
+    serving_endpoint:
+      name: agents_smartfactory-ai-multi_agent_supervisor
+      permission: CAN_QUERY

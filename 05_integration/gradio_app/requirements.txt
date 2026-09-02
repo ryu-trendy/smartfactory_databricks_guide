@@ -1,5 +1,0 @@
-gradio~=4.44.0
-huggingface-hub~=0.35.3
-starlette==0.37.2
-requests>=2.28
-databricks-sdk>=0.118.0
